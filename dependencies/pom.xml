@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <description>依赖管理</description>
+    <groupId>com.iserver.starter</groupId>
+    <artifactId>dependencies</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+
+    <properties>
+        <!-- 项目总版本号统一管理 -->
+        <revision>Bate-1.0</revision>
+
+        <!-- Java 版本 -->
+        <jdk.version>11</jdk.version>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
+
+        <!-- Spring 版本管理 -->
+        <spring-boot.version>2.7.5</spring-boot.version>
+        <!-- SpringCloud 版本管理 -->
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
+
+        <hutool.version>5.8.7</hutool.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
