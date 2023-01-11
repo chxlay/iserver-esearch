@@ -13,7 +13,7 @@
 
     <properties>
         <!-- 项目总版本号统一管理 -->
-        <revision>Bate-1.0</revision>
+        <revision>Beta-1.0</revision>
 
         <!-- Java 版本 -->
         <jdk.version>11</jdk.version>
